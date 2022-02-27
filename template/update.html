@@ -1,0 +1,78 @@
+<h3>work you have to do today</h3>
+{% for i in data %}
+<table>
+    <thead>
+        <tr>
+            <th class="primary" scope="col">name</th>
+            <th scope="col">ability</th>
+            <th scope="col">conselation</th>
+            <th scope="col">havetodo</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">{{i.id}}:{{i.name}}</th>
+            <td>{{i.element}}</td>
+            <td>{{i.conselation}}</td>
+            <td>{{i.havetodo}}</td>
+        </tr>
+    </tbody>
+</table>
+{% endfor %}
+<a href="data">update list</a>
+<style>
+     * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    ::selection {
+        color: #ffff;
+        background: rgb(142, 73, 232);
+    }
+
+    body {
+        width: 100%;
+        height: 100vh;
+        /* overflow: hidden; */
+        padding: 10px;
+        background: linear-gradient(to bottom, #68EACC 0%, #497BE8 100%);
+    }
+    table {
+        text-align: left;
+        position: relative;
+        border-collapse: collapse;
+        background-color: #f6f6f6;
+    }
+
+    /* Spacing */
+    td,
+    th {
+        border: 1px solid #999;
+        padding: 20px;
+    }
+
+    th {
+        background: brown;
+        color: white;
+        border-radius: 0;
+        position: sticky;
+        top: 0;
+        padding: 10px;
+    }
+
+    .primary {
+        background-color: #000000
+    }
+
+    tfoot>tr {
+        background: black;
+        color: white;
+    }
+
+    tbody>tr:hover {
+        background-color: #ffc107;
+    }
+</style>
